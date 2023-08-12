@@ -1,0 +1,26 @@
+apply from: file("$rootDir/gradle/plugins/pluginAndroid.gradle")
+apply from: file("$rootDir/gradle/plugins/configVersion.gradle")
+
+android {
+	namespace = config.applicationId
+
+	defaultConfig.applicationId = config.applicationId
+
+	buildTypes {
+		debug {
+			shrinkResources = config.debug.obfuscationEnabled
+
+			if (config.debug.withSuffix) {
+				applicationIdSuffix = ".$config.debug.suffix"
+				addManifestPlaceholders(appName: "$config.appName $config.debug.suffix")
+			} else {
+				addManifestPlaceholders(appName: config.appName)
+			}
+		}
+		release {
+			shrinkResources = config.release.obfuscationEnabled
+
+			addManifestPlaceholders(appName: config.appName)
+		}
+	}
+}

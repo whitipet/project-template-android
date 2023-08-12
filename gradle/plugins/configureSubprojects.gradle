@@ -1,0 +1,32 @@
+private def configureProjectAccordingToPlugin(Project project, Plugin plugin) {
+	String pluginsDir = "$rootDir/gradle/plugins"
+	switch (plugin.class.name) {
+		case [
+				"org.gradle.api.plugins.JavaPlugin",
+				"org.gradle.api.plugins.JavaBasePlugin",
+				"org.gradle.api.plugins.JavaBasePlugin\$Inject"
+		]:
+			project.apply from: file("$pluginsDir/pluginJava.gradle")
+			break
+		case "org.jetbrains.kotlin.gradle.plugin.KotlinPluginWrapper":
+			project.apply from: file("$pluginsDir/pluginKotlin.gradle")
+			break
+		case "org.jetbrains.kotlin.gradle.plugin.KotlinAndroidPluginWrapper":
+			project.apply from: file("$pluginsDir/pluginKotlinAndroid.gradle")
+			break
+		case "com.android.build.gradle.LibraryPlugin":
+			project.apply from: file("$pluginsDir/pluginAndroidLibrary.gradle")
+			break
+		case "com.android.build.gradle.AppPlugin":
+			project.apply from: file("$pluginsDir/pluginAndroidApp.gradle")
+			break
+	}
+}
+
+project.ext.configureSubprojects = {
+	subprojects {
+		project.plugins.whenPluginAdded { plugin ->
+			configureProjectAccordingToPlugin(project, plugin)
+		}
+	}
+}

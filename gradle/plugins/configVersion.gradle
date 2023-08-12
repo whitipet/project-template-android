@@ -1,0 +1,5 @@
+android.defaultConfig {
+	final def v = config.appVersion
+	versionCode = v.major * 10_000 + v.minor * 100 + v.patch    // 10203
+	versionName = "${v.major}.${v.minor}.${v.patch}"    // 1.2.3
+}

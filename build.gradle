@@ -1,4 +1,6 @@
 buildscript {
+	apply from: file("$rootDir/projectConfig.gradle")
+
 	ext.versionCatalog = extensions.getByType(VersionCatalogsExtension).named("dep")
 
 	repositories {
@@ -38,6 +40,9 @@ subprojects {
 		resolutionStrategy.forcedModules = libs
 	}
 }
+
+apply from: file("$rootDir/gradle/plugins/configureSubprojects.gradle")
+configureSubprojects()
 
 if (hasProperty("buildScan")) buildScan {
 	termsOfServiceUrl = "https://gradle.com/terms-of-service"

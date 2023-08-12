@@ -1,0 +1,3 @@
+apply from: file("$rootDir/gradle/plugins/pluginAndroid.gradle")
+
+android.namespace = project.path.substring(1).replace(":", ".").replace("-", "_")
