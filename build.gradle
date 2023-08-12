@@ -1,5 +1,40 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
-plugins {
-	alias(libs.plugins.androidApplication) apply false
-	alias(libs.plugins.kotlinAndroid) apply false
+buildscript {
+	ext.versionCatalog = extensions.getByType(VersionCatalogsExtension).named("dep")
+
+	repositories {
+		google()
+		mavenCentral()
+		maven {
+			name = "r8"
+			url = "https://storage.googleapis.com/r8-releases/raw"
+			content { includeGroup("com.android.tools") }
+		}
+	}
+
+	dependencies {
+		classpath dep.plugins.r8.get().toString()
+		classpath dep.plugins.android.get().toString()
+		classpath dep.plugins.kotlin.get().toString()
+	}
+
+	def plugins = versionCatalog
+			.getPluginAliases()
+			.collect { versionCatalog.findPlugin(it).get().get() }
+			.collect { "${it.pluginId}:${it.version}" } //TODO: Resolve version
+	configurations.configureEach { resolutionStrategy.forcedModules = plugins }
+}
+
+subprojects {
+	repositories {
+		google()
+		mavenCentral()
+	}
+
+	def libs = versionCatalog
+			.getLibraryAliases()
+			.collect { versionCatalog.findLibrary(it).get().get() }
+			.collect { "${it.group}:${it.name}:${it.version}" } //TODO: Resolve version
+	configurations.configureEach { config ->
+		resolutionStrategy.forcedModules = libs
+	}
 }
