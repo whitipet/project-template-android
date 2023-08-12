@@ -1,0 +1,81 @@
+android.signingConfigs {
+	debug {
+		KeyProperties debugKeyProperties = KeyProperties.create(rootDir, "debug")
+		if (debugKeyProperties != null) {
+			storeFile = debugKeyProperties.getStoreFile()
+			storePassword = debugKeyProperties.getStorePassword()
+			keyAlias = debugKeyProperties.getKeyAlias()
+			keyPassword = debugKeyProperties.getKeyPassword()
+		} else logger.warn("Debug signing config. Unable to procces key, default will be used")
+	}
+	release {
+		KeyProperties releaseKeyProperties = KeyProperties.create(rootDir, "release")
+		if (releaseKeyProperties != null) {
+			storeFile = releaseKeyProperties.getStoreFile()
+			storePassword = releaseKeyProperties.getStorePassword()
+			keyAlias = releaseKeyProperties.getKeyAlias()
+			keyPassword = releaseKeyProperties.getKeyPassword()
+		} else logger.warn("Release signing config. Unable to procces key.")
+	}
+}
+
+class KeyProperties {
+
+	private final static KEY_STORE_FILE = "storeFile"
+	private final static KEY_STORE_PASSWORD = "storePassword"
+	private final static KEY_KEY_ALIAS = "keyAlias"
+	private final static KEY_KEY_PASSWORD = "keyPassword"
+
+	private Properties properties = null
+	private File storeFile = null
+
+	private KeyProperties(final File rootDir, final String keyPropertiesFileName) {
+		String keyDir = "$rootDir/.keystore/"
+		try (InputStream is = new FileInputStream(keyDir + keyPropertiesFileName)) {
+			properties = new Properties()
+			properties.load(is)
+			if (!isPropertiesValid()) throw new MissingResourceException("Invalid properties")
+			storeFile = new File(keyDir, properties.getProperty(KEY_STORE_FILE))
+			if (!storeFile.exists() || !storeFile.isFile()) throw new FileNotFoundException("Key file not found or invalid")
+		} catch (Exception e) {
+			throw e
+		}
+	}
+
+	private boolean isPropertiesValid() {
+		return properties.containsKey(KEY_STORE_FILE)
+				&& properties.containsKey(KEY_STORE_PASSWORD)
+				&& properties.containsKey(KEY_KEY_ALIAS)
+				&& properties.containsKey(KEY_KEY_PASSWORD)
+	}
+
+	File getStoreFile() {
+		return storeFile
+	}
+
+	String getStorePassword() {
+		return properties.get(KEY_STORE_PASSWORD)
+	}
+
+	String getKeyAlias() {
+		return properties.get(KEY_KEY_ALIAS)
+	}
+
+	String getKeyPassword() {
+		return properties.get(KEY_KEY_PASSWORD)
+	}
+
+	@Override
+	String toString() {
+		return properties
+	}
+
+	static KeyProperties create(final File rootDir, final String buildVariantName) {
+		try {
+			return new KeyProperties(rootDir, "${buildVariantName}.properties")
+		} catch (Exception e) {
+			println("Unable to create KeyProperties for $buildVariantName. Exception = $e")
+			return null
+		}
+	}
+}

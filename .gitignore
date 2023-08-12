@@ -19,3 +19,7 @@
 !.idea/runConfigurations.xml
 !.idea/jsonSchemas.xml
 !.idea/vcs.xml
+
+.keystore/*
+!.keystore/debug.jks
+!.keystore/debug.properties
