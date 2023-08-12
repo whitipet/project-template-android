@@ -2,4 +2,11 @@ rootProject.name = "ProjectTemplate"
 
 dependencyResolutionManagement.versionCatalogs { dep.from(files("dependencies.toml")) }
 
-include ":app"
+fileTree(".")
+		.matching {
+			exclude "**/src/**", "**/build/**", "**/.*", "**/gradle", "build.gradle"
+			include "**/build.gradle"
+		}
+		.each {
+			include ":${rootProject.projectDir.relativePath(it.parentFile).replace('/', ':')}"
+		}
