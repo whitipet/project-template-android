@@ -1,0 +1,13 @@
+plugins {
+	id "com.android.library"
+	id "kotlin-android"
+}
+
+dependencies {
+	api project(":platform:base-screen:activity")
+	api project(":platform:base-screen:fragment")
+
+	api project(":project:styling")
+
+	compileOnly dep.androidx.annotation
+}
