@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="Platform.Theme.Template" parent="Platform.V31.Theme.Template"/>
+	<style name="Platform.V31.Theme.Template" parent="Platform.V29.Theme.Template">
+		<item name="android:windowSplashScreenAnimatedIcon">?colorTransparent</item>
+		<item name="android:windowSplashScreenAnimationDuration">0</item>
+	</style>
+</resources>

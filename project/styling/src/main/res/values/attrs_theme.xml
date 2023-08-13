@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<declare-styleable name="Theme">
+		<!--region Colors-->
+		<attr name="colorTransparent" format="color"/>
+
+		<attr name="colorBackground" format="color"/>
+		<!--endregion Colors-->
+
+		<!--region System bars-->
+		<attr name="colorStatusBar" format="color"/>
+		<attr name="isLightStatusBar" format="boolean"/>
+
+		<attr name="colorNavigationBar" format="color"/>
+		<attr name="isLightNavigationBar" format="boolean"/>
+		<!--endregion System bars-->
+	</declare-styleable>
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="Platform.Theme.Template" parent="Platform.V27.Theme.Template"/>
+	<style name="Platform.V27.Theme.Template" parent="Platform.V26.Theme.Template">
+		<item name="android:windowLightNavigationBar">?isLightNavigationBar</item>
+	</style>
+</resources>

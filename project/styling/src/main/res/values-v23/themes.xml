@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="Platform.Theme.Template" parent="Platform.V23.Theme.Template"/>
+	<style name="Platform.V23.Theme.Template" parent="Platform.V0.Theme.Template">
+		<item name="android:statusBarColor">?colorStatusBar</item>
+		<item name="android:windowLightStatusBar">?isLightStatusBar</item>
+		<item name="android:navigationBarColor">#000</item>
+	</style>
+</resources>

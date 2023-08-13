@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+	<style name="Base.Theme" parent="Theme.Material3.DayNight.NoActionBar"/>
+	<style name="Platform.V0.Theme.Template" parent="Base.Theme"/>
+	<style name="Platform.Theme.Template" parent="Platform.V0.Theme.Template"/>
+	<style name="Base.Theme.Template" parent="Platform.Theme.Template">
+		<!--region Colors -->
+		<item name="android:colorPrimary">?colorBackground</item> <!--Recent apps toolbar color below Api28-->
+		<item name="android:colorBackground">?colorBackground</item>
+
+		<item name="android:colorEdgeEffect">@color/color_edge_effect</item>
+
+		<item name="colorStatusBar">@color/color_status_bar</item>
+		<item name="colorNavigationBar">@color/color_navigation_bar</item>
+		<!--endregion Colors -->
+	</style>
+	<style name="Theme.Template" parent="Base.Theme.Template.Colors"/>
+
+	<style name="Theme.Template.TransparentSysBars" parent="Theme.Template">
+		<item name="android:statusBarColor">?colorTransparent</item>
+		<item name="android:navigationBarColor">?colorTransparent</item>
+
+		<item name="android:enforceStatusBarContrast" tools:targetApi="q">false</item>
+		<item name="android:enforceNavigationBarContrast" tools:targetApi="q">false</item>
+	</style>
+</resources>

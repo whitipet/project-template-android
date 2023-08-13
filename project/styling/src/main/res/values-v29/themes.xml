@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="Platform.Theme.Template" parent="Platform.V29.Theme.Template"/>
+	<style name="Platform.V29.Theme.Template" parent="Platform.V27.Theme.Template">
+		<item name="android:navigationBarColor">?colorTransparent</item>
+
+		<item name="android:forceDarkAllowed">false</item>
+	</style>
+</resources>

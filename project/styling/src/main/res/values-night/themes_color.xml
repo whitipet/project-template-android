@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="Base.Theme.Template.Colors" parent="Base.Theme.Template">
+		<item name="colorTransparent">#00000000</item>
+
+		<item name="colorBackground">@color/m3_sys_color_dark_background</item>
+
+		<item name="isLightStatusBar">false</item>
+		<item name="isLightNavigationBar">false</item>
+	</style>
+</resources>
