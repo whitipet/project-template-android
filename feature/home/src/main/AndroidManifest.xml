@@ -1,0 +1,17 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<application android:theme="@style/Theme.Template">
+		<activity
+			android:name=".HomeActivity"
+			android:exported="false"
+			android:launchMode="singleTask"
+			android:screenOrientation="portrait">
+
+			<intent-filter>
+				<category android:name="android.intent.category.DEFAULT"/>
+
+				<action android:name="template.intent.action.open.HOME"/>
+			</intent-filter>
+		</activity>
+	</application>
+</manifest>

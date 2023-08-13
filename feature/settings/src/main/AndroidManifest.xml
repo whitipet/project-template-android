@@ -1,0 +1,16 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<application android:theme="@style/Theme.Template">
+		<activity
+			android:name=".SettingsActivity"
+			android:exported="false"
+			android:screenOrientation="portrait">
+
+			<intent-filter>
+				<category android:name="android.intent.category.DEFAULT"/>
+
+				<action android:name="template.intent.action.open.SETTINGS"/>
+			</intent-filter>
+		</activity>
+	</application>
+</manifest>

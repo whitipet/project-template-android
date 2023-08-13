@@ -2,21 +2,20 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
 	<application
+		android:name=".Application"
 		android:allowBackup="true"
 		android:label="ProjectTemplate"
-		android:theme="@style/Theme.AppCompat.DayNight">
+		android:theme="@style/Theme.Template">
 
 		<activity-alias
 			android:name=".Launcher"
 			android:exported="true"
-			android:targetActivity=".MainActivity">
+			android:targetActivity="feature.home.HomeActivity">
 
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN"/>
 				<category android:name="android.intent.category.LAUNCHER"/>
 			</intent-filter>
 		</activity-alias>
-
-		<activity android:name=".MainActivity"/>
 	</application>
 </manifest>
