@@ -1,0 +1,12 @@
+plugins {
+	id "com.android.library"
+	id "kotlin-android"
+}
+
+dependencies {
+	api project(":platform:base-screen")
+
+	api dep.androidx.appCompat
+
+	compileOnly dep.androidx.annotation
+}

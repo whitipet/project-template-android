@@ -20,6 +20,8 @@ androidx-savedState = "1.2.1"               # https://mvnrepository.com/artifact
 androidx-vectorDrawable = "1.1.0"           # https://mvnrepository.com/artifact/androidx.vectordrawable/vectordrawable                    https://developer.android.com/jetpack/androidx/releases/vectordrawable
 androidx-versionedParcelable = "1.1.1"      # https://mvnrepository.com/artifact/androidx.versionedparcelable/versionedparcelable          https://developer.android.com/jetpack/androidx/releases/versionedparcelable
 
+google-material = "1.9.0"                   # https://mvnrepository.com/artifact/com.google.android.material/material                      https://github.com/material-components/material-components-android/releases
+
 [plugins]
 android = { id = "com.android.tools.build:gradle", version.ref = "agp" }
 r8 = { id = "com.android.tools:r8", version.ref = "r8" }
@@ -67,3 +69,5 @@ androidx-vectorDrawable = { module = "androidx.vectordrawable:vectordrawable", v
 androidx-vectorDrawable-animated = { module = "androidx.vectordrawable:vectordrawable-animated", version.ref = "androidx-vectorDrawable" }
 androidx-vectorDrawable-seekable = { module = "androidx.vectordrawable:vectordrawable-seekable", version.ref = "androidx-vectorDrawable" }
 androidx-versionedParcelable = { module = "androidx.versionedparcelable:versionedparcelable", version.ref = "androidx-versionedParcelable" }
+
+google-material = { module = "com.google.android.material:material", version.ref = "google-material" }

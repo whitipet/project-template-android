@@ -1,0 +1,14 @@
+plugins {
+	id "com.android.library"
+	id "kotlin-android"
+}
+
+dependencies {
+	api project(":platform:base-screen")
+
+	implementation project(":platform:stdlib-android:lifecycle-aware-lazy")
+
+	implementation dep.google.material
+
+	compileOnly dep.androidx.annotation
+}
