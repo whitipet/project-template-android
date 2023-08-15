@@ -1,4 +1,4 @@
-package com.whitpet.projecttemplate
+package app
 
 import android.app.Application
 
