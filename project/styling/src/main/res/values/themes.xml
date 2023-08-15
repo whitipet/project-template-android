@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-	<style name="Base.Theme" parent="Theme.Material3.DayNight.NoActionBar"/>
+	<style name="Base.Theme" parent="Theme.Material3.DynamicColors.DayNight">
+		<item name="windowActionBar">false</item>
+		<item name="windowNoTitle">true</item>
+	</style>
 	<style name="Platform.V0.Theme.Template" parent="Base.Theme"/>
 	<style name="Platform.Theme.Template" parent="Platform.V0.Theme.Template"/>
 	<style name="Base.Theme.Template" parent="Platform.Theme.Template">
