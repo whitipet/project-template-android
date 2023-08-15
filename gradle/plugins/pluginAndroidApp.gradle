@@ -3,8 +3,6 @@ apply from: file("$rootDir/gradle/plugins/configVersion.gradle")
 apply from: file("$rootDir/gradle/plugins/configSigning.gradle")
 
 android {
-	namespace = "app"
-
 	defaultConfig.applicationId = config.applicationId
 
 	buildTypes {

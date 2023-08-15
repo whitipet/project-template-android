@@ -1,4 +1,6 @@
 android {
+	namespace = project.path.substring(1).replace(":", ".").replace("-", "_")
+
 	compileSdkVersion = config.compileSdkVersion
 	buildToolsVersion = config.buildToolsVersion
 
