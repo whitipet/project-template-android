@@ -36,9 +36,7 @@ subprojects {
 			.getLibraryAliases()
 			.collect { versionCatalog.findLibrary(it).get().get() }
 			.collect { "${it.group}:${it.name}:${it.version}" } //TODO: Resolve version
-	configurations.configureEach { config ->
-		resolutionStrategy.forcedModules = libs
-	}
+	configurations.configureEach { config -> resolutionStrategy.forcedModules = libs}
 }
 
 apply from: file("$rootDir/gradle/plugins/configureSubprojects.gradle")
