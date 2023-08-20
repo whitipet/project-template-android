@@ -1,4 +1,6 @@
 java {
-	sourceCompatibility = config.javaVersion
-	targetCompatibility = config.javaVersion
+	toolchain {
+		languageVersion = config.javaVersion
+		vendor = JvmVendorSpec.ADOPTIUM
+	}
 }

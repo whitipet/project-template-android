@@ -1,1 +1,0 @@
-compileKotlin.kotlinOptions.jvmTarget = config.javaVersion

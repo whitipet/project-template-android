@@ -13,12 +13,7 @@ android {
 		vectorDrawables.useSupportLibrary = true
 	}
 
-	compileOptions {
-		sourceCompatibility = config.javaVersion
-		targetCompatibility = config.javaVersion
-
-		incremental = true
-	}
+	compileOptions.incremental = true
 
 	lint.abortOnError = false
 
