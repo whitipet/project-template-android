@@ -1,14 +1,14 @@
 android {
 	namespace = project.path.substring(1).replace(":", ".").replace("-", "_")
 
-	compileSdkVersion = config.compileSdkVersion
+	compileSdk = config.compileSdkVersion
 	buildToolsVersion = config.buildToolsVersion
 
 	defaultConfig {
-		minSdkVersion(config.minSdkVersion)
-		targetSdkVersion(config.targetSdkVersion)
+		minSdk = config.minSdkVersion
+		targetSdk = config.targetSdkVersion
 
-		resConfigs(config.supportedLocales)
+		resourceConfigurations += config.supportedLocales
 		ndk.abiFilters = config.availableAbi
 		vectorDrawables.useSupportLibrary = true
 	}
