@@ -1,21 +1,28 @@
-android.signingConfigs {
-	debug {
-		KeyProperties debugKeyProperties = KeyProperties.create(rootDir, "debug")
-		if (debugKeyProperties != null) {
-			storeFile = debugKeyProperties.getStoreFile()
-			storePassword = debugKeyProperties.getStorePassword()
-			keyAlias = debugKeyProperties.getKeyAlias()
-			keyPassword = debugKeyProperties.getKeyPassword()
-		} else logger.warn("Debug signing config. Unable to procces key, default will be used")
+android {
+	signingConfigs {
+		debug {
+			KeyProperties debugKeyProperties = KeyProperties.create(rootDir, "debug")
+			if (debugKeyProperties != null) {
+				storeFile = debugKeyProperties.getStoreFile()
+				storePassword = debugKeyProperties.getStorePassword()
+				keyAlias = debugKeyProperties.getKeyAlias()
+				keyPassword = debugKeyProperties.getKeyPassword()
+			} else logger.warn("Debug signing config. Unable to procces key, default will be used")
+		}
+		release {
+			KeyProperties releaseKeyProperties = KeyProperties.create(rootDir, "release")
+			if (releaseKeyProperties != null) {
+				storeFile = releaseKeyProperties.getStoreFile()
+				storePassword = releaseKeyProperties.getStorePassword()
+				keyAlias = releaseKeyProperties.getKeyAlias()
+				keyPassword = releaseKeyProperties.getKeyPassword()
+			} else logger.warn("Release signing config. Unable to procces key.")
+		}
 	}
-	release {
-		KeyProperties releaseKeyProperties = KeyProperties.create(rootDir, "release")
-		if (releaseKeyProperties != null) {
-			storeFile = releaseKeyProperties.getStoreFile()
-			storePassword = releaseKeyProperties.getStorePassword()
-			keyAlias = releaseKeyProperties.getKeyAlias()
-			keyPassword = releaseKeyProperties.getKeyPassword()
-		} else logger.warn("Release signing config. Unable to procces key.")
+
+	buildTypes {
+		debug.signingConfig = signingConfigs.debug
+		release.signingConfig = signingConfigs.release
 	}
 }
 
