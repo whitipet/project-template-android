@@ -10,8 +10,8 @@ ext.config = [
 		],
 
 		minSdkVersion    : 24,
-		compileSdkVersion: 33,
-		targetSdkVersion : 33,
+		compileSdkVersion: 34,
+		targetSdkVersion : 34,
 
 		buildToolsVersion: "34.0.0",
 
