@@ -4,6 +4,8 @@ plugins {
 }
 
 dependencies {
+	implementation project(":app:icon")
+
 	implementation project(":feature:home")
 	implementation project(":feature:settings")
 
