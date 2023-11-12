@@ -1,7 +1,7 @@
 [versions]
-agp = "8.1.2"                               # https://mvnrepository.com/artifact/com.android.tools.build/gradle?repo=google                https://developer.android.com/studio/releases/gradle-plugin
-r8 = "8.2.22"                               # https://r8.googlesource.com/r8/+/refs/heads/8.2                                              https://r8.googlesource.com/r8/
-bundleTool = "1.15.5"                       # https://mvnrepository.com/artifact/com.android.tools.build/bundletool                        https://github.com/google/bundletool
+agp = "8.1.3"                               # https://mvnrepository.com/artifact/com.android.tools.build/gradle?repo=google                https://developer.android.com/studio/releases/gradle-plugin
+r8 = "8.2.36"                               # https://r8.googlesource.com/r8/+/refs/heads/8.2                                              https://r8.googlesource.com/r8/
+bundleTool = "1.15.6"                       # https://mvnrepository.com/artifact/com.android.tools.build/bundletool                        https://github.com/google/bundletool
 
 kotlin = "1.9.20"                           # https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-stdlib                        https://blog.jetbrains.com/kotlin/category/releases/
 
