@@ -1,9 +1,16 @@
 package platform.stdlib_android
 
 import android.content.res.Resources
+import android.util.DisplayMetrics
+import android.util.TypedValue.COMPLEX_UNIT_DIP
+import android.util.TypedValue.COMPLEX_UNIT_SP
+import android.util.TypedValue.applyDimension
+import kotlin.math.roundToInt
 
-val Int.dp2px: Int get() = (this * Resources.getSystem().displayMetrics.density).toInt()
-val Float.dp2px: Float get() = this * Resources.getSystem().displayMetrics.density
+private val dm: DisplayMetrics get() = Resources.getSystem().displayMetrics
 
-val Int.sp2px: Int get() = (this * Resources.getSystem().displayMetrics.scaledDensity).toInt()
-val Float.sp2px: Float get() = this * Resources.getSystem().displayMetrics.scaledDensity
+val Int.dpToPx: Int get() = applyDimension(COMPLEX_UNIT_DIP, this.toFloat(), dm).roundToInt().coerceAtLeast(1)
+val Float.dpToPx: Float get() = applyDimension(COMPLEX_UNIT_DIP, this, dm).coerceAtLeast(1.0f)
+
+val Int.spToPx: Int get() = applyDimension(COMPLEX_UNIT_SP, this.toFloat(), dm).roundToInt().coerceAtLeast(1)
+val Float.spToPx: Float get() = applyDimension(COMPLEX_UNIT_SP, this, dm).coerceAtLeast(1.0f)
