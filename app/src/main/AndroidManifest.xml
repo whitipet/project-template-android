@@ -6,7 +6,7 @@
 		android:allowBackup="true"
 		android:enableOnBackInvokedCallback="true"
 		android:icon="@mipmap/ic_launcher"
-		android:label="ProjectTemplate"
+		android:label="${appName}"
 		android:theme="@style/Theme.Template">
 
 		<activity-alias
