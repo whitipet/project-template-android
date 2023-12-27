@@ -12,18 +12,16 @@ private object UninitializedValue
 
 class LifecycleAwareLazy<out T>(
 	private val lifecycleOwner: LifecycleOwner,
-	initializer: () -> T,
+	private val initializer: () -> T,
 ) : Lazy<T>, Serializable, LifecycleEventObserver {
 
-	private var initializer: (() -> T)? = initializer
 	private var _value: Any? = UninitializedValue
 
 	override val value: T
 		@MainThread
 		get() {
 			if (_value === UninitializedValue) {
-				_value = initializer!!()
-				initializer = null
+				_value = initializer()
 				attachToLifecycle()
 			}
 			@Suppress("UNCHECKED_CAST")
