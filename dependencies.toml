@@ -1,5 +1,5 @@
 [versions]
-agp = "8.2.0"                               # https://mvnrepository.com/artifact/com.android.tools.build/gradle?repo=google                https://developer.android.com/studio/releases/gradle-plugin
+agp = "8.2.2"                               # https://mvnrepository.com/artifact/com.android.tools.build/gradle?repo=google                https://developer.android.com/studio/releases/gradle-plugin
 r8 = "8.3.24"                               # https://r8.googlesource.com/r8/+/refs/heads/8.3                                              https://r8.googlesource.com/r8/
 bundleTool = "1.15.6"                       # https://mvnrepository.com/artifact/com.android.tools.build/bundletool                        https://github.com/google/bundletool
 
