@@ -1,32 +1,33 @@
 ext.config = [
-		applicationId    : "com.whitpet.projecttemplate",
-		appName          : "ProjectTemplate",
+		applicationId             : "com.whitpet.projecttemplate",
+		appName                   : "ProjectTemplate",
 
 		// https://semver.org
-		appVersion       : [
+		appVersion                : [
 				major: 1,
 				minor: 0,
 				patch: 0,
 		],
 
-		minSdkVersion    : 24,
-		compileSdkVersion: 34,
-		targetSdkVersion : 34,
+		minSdkVersion             : 24,
+		compileSdkVersion         : 34,
+		compileSdkExtensionVersion: 10,
+		targetSdkVersion          : 34,
 
-		buildToolsVersion: "34.0.0",
+		buildToolsVersion         : "34.0.0",
 
-		supportedLocales : ["en"],
-		availableAbi     : ["arm64-v8a", "armeabi-v7a", "x86", "x86_64"],
+		supportedLocales          : ["en"],
+		availableAbi              : ["arm64-v8a", "armeabi-v7a", "x86", "x86_64"],
 
-		javaVersion      : JavaLanguageVersion.of(17),
+		javaVersion               : JavaLanguageVersion.of(17),
 
-		debug            : [
+		debug                     : [
 				suffix            : "debug",
 				withSuffix        : true,
 				withReleaseKey    : false,
 				obfuscationEnabled: false,
 		],
-		release          : [
+		release                   : [
 				debuggable        : false,
 				withDebugKey      : false,
 				obfuscationEnabled: true,
