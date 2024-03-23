@@ -1,6 +1,6 @@
 [versions]
 agp = "8.3.1"                               # https://mvnrepository.com/artifact/com.android.tools.build/gradle?repo=google                https://developer.android.com/studio/releases/gradle-plugin
-r8 = "8.3.35"                               # https://r8.googlesource.com/r8/+/refs/heads/8.3                                              https://r8.googlesource.com/r8/
+r8 = "8.4.21"                               # https://r8.googlesource.com/r8/+/refs/heads/8.4                                              https://r8.googlesource.com/r8/
 bundleTool = "1.15.6"                       # https://mvnrepository.com/artifact/com.android.tools.build/bundletool                        https://github.com/google/bundletool
 
 kotlin = "1.9.22"                           # https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-stdlib                        https://blog.jetbrains.com/kotlin/category/releases/
