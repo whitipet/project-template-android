@@ -3,7 +3,7 @@ agp = "8.3.1"                               # https://mvnrepository.com/artifact
 r8 = "8.4.21"                               # https://r8.googlesource.com/r8/+/refs/heads/8.4                                              https://r8.googlesource.com/r8/
 bundleTool = "1.15.6"                       # https://mvnrepository.com/artifact/com.android.tools.build/bundletool                        https://github.com/google/bundletool
 
-kotlin = "1.9.22"                           # https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-stdlib                        https://blog.jetbrains.com/kotlin/category/releases/
+kotlin = "1.9.23"                           # https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-stdlib                        https://blog.jetbrains.com/kotlin/category/releases/
 
 androidx-activity = "1.8.2"                 # https://mvnrepository.com/artifact/androidx.activity/activity                                https://developer.android.com/jetpack/androidx/releases/activity
 androidx-annotation = "1.7.1"               # https://mvnrepository.com/artifact/androidx.annotation/annotation                            https://developer.android.com/jetpack/androidx/releases/annotation
