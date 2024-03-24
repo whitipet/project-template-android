@@ -19,7 +19,7 @@ ext.config = [
 		supportedLocales          : ["en"],
 		availableAbi              : ["arm64-v8a", "armeabi-v7a", "x86", "x86_64"],
 
-		javaVersion               : JavaLanguageVersion.of(17),
+		javaVersion               : JavaLanguageVersion.of(21),
 
 		debug                     : [
 				suffix            : "debug",
