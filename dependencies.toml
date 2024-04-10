@@ -1,13 +1,13 @@
 [versions]
-agp = "8.3.1"                               # https://mvnrepository.com/artifact/com.android.tools.build/gradle?repo=google                https://developer.android.com/studio/releases/gradle-plugin
-r8 = "8.4.21"                               # https://r8.googlesource.com/r8/+/refs/heads/8.4                                              https://r8.googlesource.com/r8/
+agp = "8.3.2"                               # https://mvnrepository.com/artifact/com.android.tools.build/gradle?repo=google                https://developer.android.com/studio/releases/gradle-plugin
+r8 = "8.4.23"                               # https://r8.googlesource.com/r8/+/refs/heads/8.4                                              https://r8.googlesource.com/r8/
 bundleTool = "1.15.6"                       # https://mvnrepository.com/artifact/com.android.tools.build/bundletool                        https://github.com/google/bundletool
 
 kotlin = "1.9.23"                           # https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-stdlib                        https://blog.jetbrains.com/kotlin/category/releases/
 
 androidx-activity = "1.8.2"                 # https://mvnrepository.com/artifact/androidx.activity/activity                                https://developer.android.com/jetpack/androidx/releases/activity
 androidx-annotation = "1.7.1"               # https://mvnrepository.com/artifact/androidx.annotation/annotation                            https://developer.android.com/jetpack/androidx/releases/annotation
-androidx-annotationExp = "1.4.0"            # https://mvnrepository.com/artifact/androidx.annotation/annotation-experimental               https://developer.android.com/jetpack/androidx/releases/annotation
+androidx-annotationExp = "1.4.1"            # https://mvnrepository.com/artifact/androidx.annotation/annotation-experimental               https://developer.android.com/jetpack/androidx/releases/annotation
 androidx-appCompat = "1.6.1"                # https://mvnrepository.com/artifact/androidx.appcompat/appcompat                              https://developer.android.com/jetpack/androidx/releases/appcompat
 androidx-arch = "2.2.0"                     # https://mvnrepository.com/artifact/androidx.arch.core/core-common                            https://developer.android.com/jetpack/androidx/releases/arch
 androidx-collection = "1.4.0"               # https://mvnrepository.com/artifact/androidx.collection/collection                            https://developer.android.com/jetpack/androidx/releases/collection
