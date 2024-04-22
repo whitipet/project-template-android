@@ -22,9 +22,19 @@ buildscript {
 	def plugins = versionCatalog
 			.getPluginAliases()
 			.collect { versionCatalog.findPlugin(it).get().get() }
-			.collect { "${it.pluginId}:${it.version}" } //TODO: Resolve version
+			.collect { "${it.pluginId}:${it.version}" }
 	configurations.configureEach { resolutionStrategy.forcedModules = plugins }
 }
+
+def libsResolved = [:]
+versionCatalog.getLibraryAliases().collect { versionCatalog.findLibrary(it).get().get() }.forEach {
+	if (it.group != null && it.name != null && it.version != null) {
+		def artifact = it.group + ":" + it.name
+		if (libsResolved.containsKey(artifact)) libsResolved.remove(artifact)
+		else libsResolved.put(artifact, it.version)
+	}
+}
+def libs = libsResolved.collect { "${it.key}:${it.value}" }
 
 subprojects {
 	repositories {
@@ -32,10 +42,6 @@ subprojects {
 		mavenCentral()
 	}
 
-	def libs = versionCatalog
-			.getLibraryAliases()
-			.collect { versionCatalog.findLibrary(it).get().get() }
-			.collect { "${it.group}:${it.name}:${it.version}" } //TODO: Resolve version
 	configurations.configureEach { config -> resolutionStrategy.forcedModules = libs }
 }
 
