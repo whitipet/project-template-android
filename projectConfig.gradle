@@ -2,16 +2,15 @@ ext.config = [
 		applicationId             : "com.whitpet.projecttemplate",
 		appName                   : "ProjectTemplate",
 
-		// https://semver.org
 		appVersion                : [
 				major: 1,
 				minor: 0,
 				patch: 0,
-		],
+		], // https://semver.org
 
 		minSdkVersion             : 24,
 		compileSdkVersion         : 34,
-		compileSdkExtensionVersion: 10,
+		compileSdkExtensionVersion: 11,
 		targetSdkVersion          : 34,
 
 		buildToolsVersion         : "34.0.0",
