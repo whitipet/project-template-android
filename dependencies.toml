@@ -1,26 +1,26 @@
 [versions]
 agp = "8.5.0"                               # https://mvnrepository.com/artifact/com.android.tools.build/gradle?repo=google                https://developer.android.com/studio/releases/gradle-plugin
-r8 = "8.4.25"                               # https://r8.googlesource.com/r8/+/refs/heads/8.4                                              https://r8.googlesource.com/r8/
-bundleTool = "1.16.0"                       # https://mvnrepository.com/artifact/com.android.tools.build/bundletool                        https://github.com/google/bundletool
+r8 = "8.5.31"                               # https://r8.googlesource.com/r8/+/refs/heads/8.5                                              https://r8.googlesource.com/r8/
+bundleTool = "1.17.0"                       # https://mvnrepository.com/artifact/com.android.tools.build/bundletool                        https://github.com/google/bundletool
 
 kotlin = "2.0.0"                            # https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-stdlib                        https://blog.jetbrains.com/kotlin/category/releases/
 
 androidx-activity = "1.9.0"                 # https://mvnrepository.com/artifact/androidx.activity/activity                                https://developer.android.com/jetpack/androidx/releases/activity
-androidx-annotation = "1.7.1"               # https://mvnrepository.com/artifact/androidx.annotation/annotation                            https://developer.android.com/jetpack/androidx/releases/annotation
+androidx-annotation = "1.8.0"               # https://mvnrepository.com/artifact/androidx.annotation/annotation                            https://developer.android.com/jetpack/androidx/releases/annotation
 androidx-annotationExp = "1.4.1"            # https://mvnrepository.com/artifact/androidx.annotation/annotation-experimental               https://developer.android.com/jetpack/androidx/releases/annotation
-androidx-appCompat = "1.6.1"                # https://mvnrepository.com/artifact/androidx.appcompat/appcompat                              https://developer.android.com/jetpack/androidx/releases/appcompat
+androidx-appCompat = "1.7.0"                # https://mvnrepository.com/artifact/androidx.appcompat/appcompat                              https://developer.android.com/jetpack/androidx/releases/appcompat
 androidx-arch = "2.2.0"                     # https://mvnrepository.com/artifact/androidx.arch.core/core-common                            https://developer.android.com/jetpack/androidx/releases/arch
 androidx-collection = "1.4.0"               # https://mvnrepository.com/artifact/androidx.collection/collection                            https://developer.android.com/jetpack/androidx/releases/collection
-androidx-core = "1.13.0"                    # https://mvnrepository.com/artifact/androidx.core/core                                        https://developer.android.com/jetpack/androidx/releases/core
+androidx-core = "1.13.1"                    # https://mvnrepository.com/artifact/androidx.core/core                                        https://developer.android.com/jetpack/androidx/releases/core
 androidx-customView = "1.1.0"               # https://mvnrepository.com/artifact/androidx.customview/customview                            https://developer.android.com/jetpack/androidx/releases/customview
-androidx-fragment = "1.6.2"                 # https://mvnrepository.com/artifact/androidx.fragment/fragment                                https://developer.android.com/jetpack/androidx/releases/fragment
-androidx-lifecycle = "2.7.0"                # https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-common                       https://developer.android.com/jetpack/androidx/releases/lifecycle
+androidx-fragment = "1.8.1"                 # https://mvnrepository.com/artifact/androidx.fragment/fragment                                https://developer.android.com/jetpack/androidx/releases/fragment
+androidx-lifecycle = "2.8.2"                # https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-common                       https://developer.android.com/jetpack/androidx/releases/lifecycle
 androidx-loader = "1.1.0"                   # https://mvnrepository.com/artifact/androidx.loader/loader                                    https://developer.android.com/jetpack/androidx/releases/loader
 androidx-savedState = "1.2.1"               # https://mvnrepository.com/artifact/androidx.savedstate/savedstate                            https://developer.android.com/jetpack/androidx/releases/savedstate
-androidx-vectorDrawable = "1.1.0"           # https://mvnrepository.com/artifact/androidx.vectordrawable/vectordrawable                    https://developer.android.com/jetpack/androidx/releases/vectordrawable
+androidx-vectorDrawable = "1.2.0"           # https://mvnrepository.com/artifact/androidx.vectordrawable/vectordrawable                    https://developer.android.com/jetpack/androidx/releases/vectordrawable
 androidx-versionedParcelable = "1.2.0"      # https://mvnrepository.com/artifact/androidx.versionedparcelable/versionedparcelable          https://developer.android.com/jetpack/androidx/releases/versionedparcelable
 
-google-material = "1.11.0"                  # https://mvnrepository.com/artifact/com.google.android.material/material                      https://github.com/material-components/material-components-android/releases
+google-material = "1.12.0"                  # https://mvnrepository.com/artifact/com.google.android.material/material                      https://github.com/material-components/material-components-android/releases
 
 [plugins]
 #noinspection SimilarGradleDependency
