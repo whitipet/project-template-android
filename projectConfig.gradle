@@ -10,10 +10,10 @@ ext.config = [
 
 		minSdkVersion             : 24,
 		compileSdkVersion         : 34,
-		compileSdkExtensionVersion: 11,
+		compileSdkExtensionVersion: 12,
 		targetSdkVersion          : 34,
 
-		buildToolsVersion         : "34.0.0",
+		buildToolsVersion         : "35.0.0",
 
 		supportedLocales          : ["en"],
 		availableAbi              : ["arm64-v8a", "armeabi-v7a", "x86", "x86_64"],
