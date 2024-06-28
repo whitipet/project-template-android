@@ -23,3 +23,5 @@
 .keystore/*
 !.keystore/debug.jks
 !.keystore/debug.properties
+
+.kotlin/sessions
