@@ -9,9 +9,8 @@ ext.config = [
 		], // https://semver.org
 
 		minSdkVersion             : 24,
-		compileSdkVersion         : 34,
-		compileSdkExtensionVersion: 12,
-		targetSdkVersion          : 34,
+		compileSdkVersion         : 35,
+		targetSdkVersion          : 35,
 
 		buildToolsVersion         : "35.0.0",
 
