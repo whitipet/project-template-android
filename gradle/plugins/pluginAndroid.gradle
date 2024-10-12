@@ -2,7 +2,6 @@ android {
 	namespace = project.path.substring(1).replace(":", ".").replace("-", "_")
 
 	compileSdk = config.compileSdkVersion
-	compileSdkExtension = config.compileSdkExtensionVersion
 	buildToolsVersion = config.buildToolsVersion
 
 	defaultConfig {

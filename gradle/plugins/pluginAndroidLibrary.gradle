@@ -1,1 +1,2 @@
-apply from: file("$rootDir/gradle/plugins/pluginAndroid.gradle")
+android.buildTypes.debug.minifyEnabled = false
+android.buildTypes.release.minifyEnabled = false

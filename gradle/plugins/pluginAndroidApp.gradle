@@ -1,4 +1,3 @@
-apply from: file("$rootDir/gradle/plugins/pluginAndroid.gradle")
 apply from: file("$rootDir/gradle/plugins/configVersion.gradle")
 apply from: file("$rootDir/gradle/plugins/configSigning.gradle")
 
@@ -7,6 +6,9 @@ android {
 
 	buildTypes {
 		debug {
+			if (config.debug.withReleaseKey) signingConfig = signingConfigs.release
+			else signingConfig = signingConfigs.debug
+
 			shrinkResources = config.debug.obfuscationEnabled
 
 			if (config.debug.withSuffix) {
@@ -17,6 +19,9 @@ android {
 			}
 		}
 		release {
+			if (config.release.withDebugKey) signingConfig = signingConfigs.debug
+			else signingConfig = signingConfigs.release
+
 			shrinkResources = config.release.obfuscationEnabled
 
 			addManifestPlaceholders(appName: config.appName)
