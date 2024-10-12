@@ -1,2 +1,1 @@
-# Get rid of package names, makes file smaller
--repackageclasses
+-repackageclasses  # Get rid of package names, makes file smaller
